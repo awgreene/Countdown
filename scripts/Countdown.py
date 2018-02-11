@@ -1,13 +1,18 @@
-#!/usr/bin/python
-from os import environ
+from sys import argv
 from time import sleep
 
-time = environ['TIMEOUT']
+# Set time to first argument
+time = argv[1]
+
+# Set seconds to integer representation of time
 seconds = int(time)
+
+# Make sure time provided is greater than or equal to zero
 if(seconds < 0):
-    print("TIMEOUT must be greater than or equal to zero")
+    print("Time must be greater than or equal to zero")
     quit()
 
+# Start countdown
 while(seconds > 0):
     print(str(seconds) + " second(s) remaining...")
     seconds -= 1
