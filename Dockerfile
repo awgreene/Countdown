@@ -1,5 +1,5 @@
 # Build from the latest Python image
-FROM python:latest
+FROM python:3
 
 # Add the scripts folder from our project to the image
 ADD ./scripts ./scripts
